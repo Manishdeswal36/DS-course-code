@@ -1,0 +1,21 @@
+{
+    "[python]": {
+        "editor.inlineSuggest.enabled": false
+    },
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "mysql local",
+            "database": "new_app",
+            "username": "root",
+            "password": "improve",
+            "connectionTimeout": 15
+        }
+    ]
+}
