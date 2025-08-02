@@ -1,0 +1,10 @@
+
+- [[software used]]
+- [[why is sql]]
+- [[Types of sql commands]]
+- [[DDL commands for databases]]
+- [[DDL commands for tables]]
+- [[Data Integrity]]
+- [[constraints in mysql]]
+- [[alter table command]]
+- [[editing and delteting constraints]]
