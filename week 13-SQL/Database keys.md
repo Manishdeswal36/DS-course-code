@@ -2,7 +2,7 @@
 
 # Database keys.
 a key in a database is an `attribuites` or a `set of attribuites` that uniquely identifies a tuple(row) in a table. 
-- keys play a crucial role in ensuring the integrity and relaibaitlity of a databases by enforing unique constraint on the data and 
+- keys play a crucial role in ensuring the integrity and relaibaitlity of a databases by enforing unique constraint on the data 
 - establishing relationship between tables . 
 
 
@@ -59,11 +59,11 @@ A candidate keys is a minimal super ,meaning it has no reducant attribution , it
 - [ ] Roll no 
 - [ ] Email 
 - ~~Roll no + Name~~ jab Roll no akala key ban sakta ha tho name kyu handle kara 
--  ~~Roll no  + Branch ~~ same logi here 
+-  ~~Roll no  + Branch~~ same logic here 
 - ~~Roll no  + email~~
 
 -  ~~Roll no + Name + Branch~~ kyuki roll no akala ban sakta ha 
--  ~~Roll no + Name + email~~  same logi with email 
+-  ~~Roll no + Name + email~~  same logic with email 
 - ~~Roll no + Name + Branch + email~~  
 
 deko jarraut nahi thi en sab ma redundant tha. deko jab hum roll number ka use karega differentiate kar sakta ha tho ma isliya ya sab roll + name ,course , faultu tha aanavashak tha isliya ena aata diya gaya .  
