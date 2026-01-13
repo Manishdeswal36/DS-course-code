@@ -1,0 +1,720 @@
+cells:
+  - kind: 1
+    languageId: markdown
+    value: "Today we learn  sql Questions which may be ask interview        \r
+
+      starting ka questions database sa related ha and last wala sqal sa related
+      ha that's the plan"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "Q1: What is the difference between database client and database
+      server      \r
+
+      Understand the termnlogy kiya cheez ko database client bola jata ha kiya
+      cheez ko database server"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "deko internet yani computers ka bitch communication phala ek server hota
+      ha ek computer jis par datbase ha fir client yani dursa computer us server
+      wala computer par raka database ko access karta ha "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "deko abhi hum database bana raha vo 'localhost server; yani apna hi
+      computer par bana raha . aws wala session ma hamn aws par  server bana ha
+      .\r
+
+      aor client yani apna hi computer ka mysql workbench sa database ko access
+      kar raha ha  tho hamar hi computer two parts ma divide ho raha ha wahi
+      server ban ja raha wahi client ban ja raha ha"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "so their is energy then form electricity . then form electromagetic
+      waves then interent . and then one computer connect with anohter computer
+      and electricity run on it. one physical computer have database server
+      inside dbms software inside database inside tables inside column and rows
+      and data . \r
+
+      and the data transfer from one computer to another "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# Database Questions \r
+
+      1. Define  the Termnologies\r
+
+      - Database Server \r
+
+      - Database Client \r
+
+      - Database\r
+
+      - DBMS(database management system)\r
+
+      2. What is database engine\r
+
+      3. Components of DBMS\r
+
+      4. What is Colleation"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# Sql Questions \r
+
+      5. Difference between Count(*) and Count(column)"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "Count(column) = count the non - null values. whai rows jaha null values
+      nahi ha .\r
+
+      Count(*)  = counting all the rows\r
+
+      Count(1) = works same\r
+
+      Count('something') =works like same"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## now discussion on null values"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### How it deals with NON NULL values\r
+
+      meaning yadi aap koi bhi operation karogo null ka sath arithemtic ,logical
+      tho result hamesa null ayega . yadi apka input ma null then ouptut ma bhi
+      null"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT 5 + 5
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- any arithemtic operatiion \r
+
+      SELECT NULL + 5"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- any arithemtic ,logical, relationsal operatiion \r
+
+      SELECT NULL > 5"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### order by \r
+
+      what happen to null values when you do sorting "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: tho database una sabsa choti values ki tara treat karta ha Asc ma upar
+      Desc ma nicha aa jayegi
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "CREATE TABLE null_sample (\r
+
+      \    id int ,\r
+
+      \    name VARCHAR(10),\r
+
+      \    branch VARCHAR(3),\r
+
+      \    marks int \r
+
+      \    \r
+
+      )"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "INSERT INTO null_sample (id, name, branch, marks) VALUES\r
+
+      (1, 'Nitish', 'EEE', 79),\r
+
+      (2, 'Ankit', 'ECE', 91),\r
+
+      (3, 'Rishabh', 'EEE', 80),\r
+
+      (4, 'Abhinav', 'CSE', 50),\r
+
+      (5, 'Ankita', 'ECE', 56),\r
+
+      (6, 'Anit', 'EEE', NULL),\r
+
+      (7, 'Amit', NULL, 90),\r
+
+      (8, 'Vivek', 'CSE', 79),\r
+
+      (9, 'Rohit', 'CSE', NULL),\r
+
+      (10, 'Rahul', 'ECE', NULL),\r
+
+      (11, 'Vinay', NULL, 82),\r
+
+      (12, 'Adbhut', NULL, 100),\r
+
+      (NULL,  NULL, NULL, NULL);\r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT * FROM campusx.null_sample\r
+
+      ORDER BY marks ASC"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT * FROM campusx.null_sample\r
+
+      ORDER BY marks DESC"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## Groupby\r
+
+      grobuy ma vo null values ka ek alag group bana deta ha          \r
+
+      vo null values ko ek alag group ma assign kar deta ha       \r
+
+      deko jis column ma aap grouby laga raha ho yadi usma null values ha tho ek
+      group null values ka bhi ban jata ha \r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- lets check for branch wise marks\r
+
+      -- think kiya hoga null values reject ya accept\r
+
+      SELECT branch ,AVG(marks)\r
+
+      FROM null_sample\r
+
+      GROUP BY branch"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## aggreation operation\r
+
+      you apply the agg operation in two ways \r
+
+      - with grouby \r
+
+      - without groupby"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT SUM(marks) FROM campusx.null_sample
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- without grouby\r
+
+      -- all mathemtical operation ignored  the null values\r
+
+      SELECT COUNT(marks) FROM campusx.null_sample"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: -- see slide 6
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- null values are counted \r
+
+      SELECT branch ,COUNT(*)\r
+
+      FROM null_sample\r
+
+      GROUP BY branch"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- null values are not counted \r
+
+      SELECT branch ,COUNT(marks)\r
+
+      FROM null_sample\r
+
+      GROUP BY branch"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## how to find the null values"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT * \r
+
+      FROM campusx.null_sample\r
+
+      WHERE marks IS NULL"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- equal to operator not work\r
+
+      SELECT * \r
+
+      FROM campusx.null_sample\r
+
+      WHERE marks = NULL"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- find values jo null nahi ha \r
+
+      SELECT * \r
+
+      FROM campusx.null_sample\r
+
+      WHERE marks IS NOT NULL"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## replace null values \r
+
+      it like in pandas fillna"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: ""
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- example we replace the null values in branch is N/A not available\r
+
+      SELECT id ,name , COALESCE(branch,'N/A') ,marks\r
+
+      FROM null_sample"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- deko yadi markds ki null values ko avg marks sa replace karna ha \r
+
+      SELECT id ,name , branch,COALESCE(marks, AVG(marks))\r
+
+      FROM null_sample"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- it will throw an error we have o use the subquery concept . \r
+
+      -- default values sa replace kar sakta ha \r
+
+      SELECT id ,name , branch,COALESCE(marks, 0)\r
+
+      FROM null_sample"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## delete vs trucnate"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# non -equaii joins "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- we have users and orders\r
+
+      SELECT *\r
+
+      FROM orders t1\r
+
+      JOIN users t2\r
+
+      ON t1.user_id = t2.user_id"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "common rows nikal kar do based on same on the condition\r
+
+      you can use all the operatores instead of equal to \r
+
+      \ greator than ,less  than not equal to          \r
+
+      \ isko ko bolta ha non-equii joins "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "--- lets try with greator than\r
+
+      SELECT *\r
+
+      FROM orders t1\r
+
+      JOIN users t2\r
+
+      ON t1.user_id > t2.user_id"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "--- lets try with not equal to \r
+
+      SELECT *\r
+
+      FROM orders t1\r
+
+      JOIN users t2\r
+
+      ON t1.user_id != t2.user_id"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "why should you use the non -equii joins ?       \r
+
+      basically bhut kam scenerio siutaions hota ha ja aap non-equaii joins use
+      karta ho mostly aap equii joins hi use karta ha "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "example ipl teams match examples chennina,banglore ,rajastan \r
+
+      question kis kis teams ka bitch match possible ha"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# natural joins \r
+
+      agar two tables ma same column name and data type ha tho vo automatically
+      inner join kar dega apko column name define karena ki jarruat nahi padena
+      padegi\r
+
+      - same column mil gaya then use inner join \r
+
+      - same column nahi then perform croos join"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- observe both have same result\r
+
+      SELECT *\r
+
+      FROM orders t1\r
+
+      JOIN users t2\r
+
+      ON t1.user_id = t2.user_id"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT * \r
+
+      FROM orders t1\r
+
+      NATURAL JOIN users t2"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT *\r
+
+      FROM order_details t1\r
+
+      NATURAL JOIN users t2"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: -- deko erro nahi aya cross join ho gaya
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT  COUNT(*) FROM order_details t1\r\n"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# Anti joins \r
+
+      ya exculding joins it is simply set difference A-B = a ka andr sa b ko
+      aata do "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# all and any operator"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "hum un bacho ka marks nikalna chata ha jinka marks puri class ka avg
+      marks sa jada ha "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT * FROM students\r
+
+      WHERE marks > ALL\r
+
+      -- aap bacho ka marks ko sabsa compare kar raha ho \r
+
+      -- sabsa jada hoga tabhi aap True hoga \r
+
+      -- aap marks ko [ _ ,  _ , _ , _ ]\r
+
+      -- list ki sabhi values sa compare karoga\r
+
+      -- yadi ya kahi bhi fail yani false ayega tho .\r
+
+      -- pura false\r
+
+      \r
+
+      -- it similar like AND OR \r
+
+      -- ALL -> AND\r
+
+      -- ANY -> OR"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT * FROM campusx.null_sample\r
+
+      -- find the maximum marks scored by student\r
+
+      -- aap is question ko kahi tarika sa kar sakta ho \r
+
+      -- order by (sorting) , subquery ,hum ya kam all laga kar karega"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- who is the highest marks scorer in the class "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT marks FROM null_sample\r
+
+      WHERE marks IS NOT NULL"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT *\r
+
+      FROM null_sample\r
+
+      WHERE marks >= ALL(SELECT marks FROM null_sample WHERE marks is NOT NULL)"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT *\r
+
+      FROM null_sample\r
+
+      ORDER BY marks ASC\r
+
+      LIMIT 1"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- sabsa kam marks chod kar ka baki sabka marks print karna chata ha\r
+
+      -- for Any\r
+
+      SELECT *\r
+
+      FROM null_sample\r
+
+      WHERE marks > ANY (SELECT marks FROM null_sample WHERE marks is NOT NULL)"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# Remove Duplicate rows\r
+
+      how to find the duplicate rows \r
+
+      and how to remove it"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "CREATE TABLE duplicate (\r
+
+      \    name   VARCHAR(50),\r
+
+      \    gender VARCHAR(10),\r
+
+      \    age    INT,\r
+
+      \    id     INT PRIMARY KEY\r
+
+      );\r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "INSERT INTO duplicate (name, gender, age, id) VALUES\r
+
+      ('Nitish', 'Male', 30, 1),\r
+
+      ('Ankit', 'Male', 31, 2),\r
+
+      ('Neha', 'Female', 21, 3),\r
+
+      ('Nitish', 'Male', 30, 4),\r
+
+      ('Nitish', 'Male', 30, 5),\r
+
+      ('Neha', 'Female', 21, 6),\r
+
+      ('Amit', 'Male', 29, 7),\r
+
+      ('Rahul', 'Male', 23, 8);\r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT * FROM pratice.duplicate
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- id is different but name is same "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- logic rows ki values same ha tho vo duplidates\r
+
+      -- first apply the groupby\r
+
+      SELECT name,gender ,age,COUNT(*)\r
+
+      FROM pratice.duplicate\r
+
+      GROUP BY name,gender,age"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- deko un columns ka andr rows same ha \r
+
+      -- normally unique ha tho 1 ana cahya\r
+
+      -- Count(*) bata raha ha vo kitni baar data repeat hua ha\r
+
+      -- yani duplicate "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- logic rows ki values same ha tho vo duplidates\r
+
+      -- first apply the groupby\r
+
+      SELECT name,gender ,age,COUNT(*)\r
+
+      FROM pratice.duplicate\r
+
+      GROUP BY name,gender,age\r
+
+      HAVING COUNT(*) > 1"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- ya tha detection ka code\r
+
+      -- now we have delete drop the "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT DISTINCT name,gender,age\r
+
+      FROM pratice.duplicate"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# Meta Data Queries\r
+
+      Data about data     \r
+
+      yani apka database ma kitna columns name,foreien keys ,data type  "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## How to see all the tables of a database"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- kal hamna streamlit ma flight dashboard banya tha \r
+
+      -- deko information schema \r
+
+      -- schema bolta ha database ko tho sahi hota information about databases\r
+
+      SELECT * \r
+
+      FROM information_schema.Tables\r
+
+      WHERE table_schema = 'zomato'"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- huma uska andr sirf table name dekna chata ha\r
+
+      SELECT TABLE_NAME \r
+
+      FROM information_schema.Tables\r
+
+      WHERE table_schema = 'zomato'"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT TABLE_NAME \r
+
+      FROM information_schema.Tables\r
+
+      WHERE table_schema = 'campusx'"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## How to print col name of a particular database"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT *\r
+
+      FROM information_schema.Columns\r
+
+      WHERE table_schema = 'campusx' AND table_name = 'smartphones'"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT COLUMN_NAME\r
+
+      FROM information_schema.Columns\r
+
+      WHERE table_schema = 'campusx' AND table_name = 'smartphones'"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: using the techanique you find the column name kisi bhi table sa
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- chalo zomato ka find karta ha \r
+
+      SELECT COLUMN_NAME\r
+
+      FROM information_schema.Columns\r
+
+      WHERE table_schema = 'zomato' AND table_name = 'orders'"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "##  How to create empty tables with the same column structure as another
+      table"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- chalo ma orders table ka stucture ko create karna chata hu\r
+
+      CREATE TABLE zomato.duplicate_orders LIKE zomato.orders"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: -- isma 0 values hogi lakin stucture bikhul orders jesa hoga
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT * FROM zomato.duplicate_orders
+    metadata: {}
+metadata:
+  conn:
+    id: ntHqisTGnkdkB1EjXUZeT
+    name: mysql demo
+  database: pratice
