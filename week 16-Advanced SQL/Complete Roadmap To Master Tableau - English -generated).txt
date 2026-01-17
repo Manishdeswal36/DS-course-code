@@ -1,0 +1,210 @@
+alright so now let's have an overview of
+
+the big picture to understand the
+
+complete roadmap for learning Tableau
+
+and how I structured the Tableau course
+
+the first chapter is all about the
+
+basics before we start using Tableau
+
+it's important to have basic
+
+understanding of the data terminology
+
+like Peak data data visualizations
+
+business intelligence and you will learn
+
+what is Tableau and why Tableau is very
+
+powerful tool and next it's important to
+
+understand the Tableau product Suite
+
+since Tableau offers 8 Unique Products
+
+understanding the differences between
+
+these products will help you to find out
+
+which one is the best for your needs
+
+after that we're gonna talk about the
+
+Tableau architecture here you will learn
+
+how Tableau internally works and what
+
+are the main components of Tableau this
+
+can help you to have a deep knowledge in
+
+Tableau components and gonna make you an
+
+expert in your project and once you
+
+learned all the theory and the basics
+
+you have to prepare your environment for
+
+practicing by downloading an in
+
+installing free Tableau public and
+
+preparing the practice data sets in the
+
+next one you will learn how to combine
+
+data from multiple tables and sources
+
+you will learn from methods joins Union
+
+relationships and data blending and you
+
+will understand the differences between
+
+them in the next chapter you have to
+
+understand that Tableau metadata one of
+
+the key Concepts in Tableau is
+
+understanding the data types and the
+
+differences between dimensions and
+
+measures discrete and continuous and how
+
+to use them and in The Next Step you
+
+will learn how to organize and customize
+
+your data using hierarchies pins sets
+
+groups and parameters and next it's
+
+really important to learn how to filter
+
+your data filterings allows you to focus
+
+in specific part of your data and in
+
+Tableau there are many ways on how to
+
+filter your data in the next chapter we
+
+will learn how to sort your data sorting
+
+allows you to rearrange your data in a
+
+way that makes it easier to understand
+
+and to analyze and in the next chapter
+
+we will go in more advanced topics like
+
+the Tableau calculator Tableau
+
+calculations are very powerful they can
+
+help you to perform complex data
+
+Transformations there are many different
+
+types of calculations like number
+
+calculations string date logic and so on
+
+and in the next chapter we will learn a
+
+very important Concept in Tableau the
+
+level of detail LOD Expressions where
+
+you can learn how to control the level
+
+of aggregations in your calculations and
+
+we have three types fixed include and
+
+exclude and in the next chapter we will
+
+start exploring the different types of
+
+visualizations and charts available in
+
+Tableau like the bar chart line chart
+
+three Maps area charts and so on and
+
+after we learned how to build a charts
+
+we have to learn how to make them
+
+interactive and to add actions to them
+
+this can allows you to create
+
+interactive and engaging visualizations
+
+then in the next one we have to add the
+
+last Touch by formatting your Tableau
+
+workbook and worksheets which will help
+
+to highlight the important informations
+
+and improve the overall look and in the
+
+next chapter you will learn how to bring
+
+all your work together in a dashboard
+
+and stories where we can learn about
+
+sites and devices the layouts and many
+
+best practices and in the last chapter
+
+we're going to create a project called
+
+The SuperStore where we're gonna put all
+
+the puzzles together in one project and
+
+it's the best way to improve your
+
+Tableau skills where I'm gonna show you
+
+the process by going step by step from
+
+the requirements until publishing the
+
+project alright so that was the complete
+
+roadmap for learning Tableau and if you
+
+follow all those steps you will become a
+
+master in Tableau to make awesome
+
+projects and for me to complete this
+
+course I would really appreciate it if
+
+you support my channel by subscribing
+
+liking and commenting and I hope you'll
+
+enjoy the journey of learning Tableau so
+
+let's jump in and get started
+
+foreign
+
+[Music]
+

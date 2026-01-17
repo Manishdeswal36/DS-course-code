@@ -1,0 +1,520 @@
+cells:
+  - kind: 1
+    languageId: markdown
+    value: "now hum we are at the level \r
+
+      we do data cleaning in sql just like we do in python and pandas         \r
+
+      we do EDA in sql"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "question: sql ma eda kyu karna ha jab hamra paas pandas ha\r
+
+      answer : their are are two reasons          \r
+
+      - jo first level of data exploration chaya vo aap sida database ma hi kar
+      deta ha fir baad ma data wareshouse banta ha fir data science team ko
+      provide kiya jata ha lakin first level kuch bhi karna ka liya  databases
+      ka sath directly cheeza karta ho       \r
+
+      deko asa ho sakta ha ki data warehouse nahi banaya jo karna ha yahi karna
+      ha directly database ma tho \r
+
+      apko data cleaning and data anlysis ana chaya sql ma"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "two reasons\r
+
+      1. data primalrily databases ka andr rahta ha\r
+
+      2. sql is comfartable with large amount of data"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "today we learn about strings in sql "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: why because then we learn how to do data cleaning on the laptop dataset .
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "# Wildcard\r
+
+      aap equal to operator ki jaga pattern-mathcing bhi use kar sakta ho
+      strings ka andr"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "exactly match ki jaga aap pattern match bhi kar sakta ho. "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: ""
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT *\r
+
+      FROM sql_cx_live.movies\r
+
+      LIMIT 10"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "Q: muja vo movies ka name chaya jisma sirf 5 characters ha "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT  name\r
+
+      FROM sql_cx_live.movies\r
+
+      WHERE name LIKE '_____'\r
+
+      -- ya par underscore reprsent characters\r
+
+      -- number of charters = length of charcters\r
+
+      -- 5 underscore = 5 characters "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "Q: muja vo movies nika; kar do jisma name A sa start hota ha and 5
+      charcters"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT  name\r
+
+      FROM sql_cx_live.movies\r
+
+      WHERE name LIKE 'A____'"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "Q: huma vo movies chaya jin ma 'man' word ata ha tho huma vo movies mil
+      jayagi superman,batman,spiderman"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT  name\r
+
+      FROM movies\r
+
+      WHERE name LIKE '%man%'"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- movies ka starting ma men hona chaya\r
+
+      SELECT  name\r
+
+      FROM movies\r
+
+      WHERE name LIKE 'man%'"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- movies ka end ma men hona chaya \r
+
+      SELECT  name\r
+
+      FROM movies\r
+
+      WHERE name LIKE '%man'"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "## String functions\r\n"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### upper/lower\r
+
+      upper = sara character ko uppercase karega          \r
+
+      lower  = sara character ko lowercase karega\r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT name,UPPER(name), LOWER(name)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### concat & concat_ws\r\n"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "hamko har movie aor uska director ka name sath ma likhna ha     \r
+
+      example apka data ma first name and last name 2 alag column ha huma unko
+      merge karka single column bana na ha ek sath likna ha "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT CONCAT(name, ' ',director,' ',star)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: this is like python the join function
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT CONCAT_WS('---',name ,director,star)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- aap koi bhi character daal sakta ha \r
+
+      SELECT CONCAT_WS('@',name ,director,star)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### substr \r
+
+      and substring are same function"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- Q: extract first 5 characters from every movie"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- deko sql ma 1 sa start hota ha instead of 0 in python\r
+
+      -- it likes range function \r
+
+      -- SUBSTR(string, position, length)\r
+
+      SELECT SUBSTR(name,1,5)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- its like start to end at the default final position\r
+
+      SELECT SUBSTR(name,1)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- last characters \r
+
+      SELECT SUBSTR(name,-1)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- last  5characters \r
+
+      SELECT SUBSTR(name,-5)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### replace\r\nreplace the words"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- example\r
+
+      SELECT REPLACE('Hello world','world','India')"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- replace man word ko pursha\r
+
+      SELECT name, REPLACE(name,'man','pursha')\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: ""
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### reverse\r
+
+      reverse karta ha apki string ko \r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT REVERSE('hello')
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "question : apka data ma kitna words palindrome ha       \r
+
+      palindrome = sida pado ya ulta pado dono tarf sa same read hoga"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT name \r
+
+      FROM movies\r
+
+      WHERE name = REVERSE(name)"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### char_length vs length\r
+
+      ya dono alag function ha \r
+
+      where both are not same -\r
+
+      The main difference between CHAR_LENGTH and LENGTH is that \r
+
+      CHAR_LENGTH returns the length of a string in characters, while \r
+
+      LENGTH returns the length of a string in bytes. This difference is \r
+
+      important when dealing with multi-byte character sets, such as UTF-8, \r
+
+      where a single character may be represented by multiple bytes.\r
+
+      Example -café"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "char_length apko technically character length bata raha ha lakin lenght
+      apko bata raha ha length bytes ma "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT name, LENGTH(name)\r
+
+      FROM movies\r
+
+      -- length white spaces ko count karka "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT name, LENGTH(name) ,CHAR_LENGTH(name)\r
+
+      FROM movies\r
+
+      -- dono tho same hi lag raha ha "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- vo movies deko jaha length and char length brabar nahi ha\r
+
+      SELECT name, LENGTH(name) ,CHAR_LENGTH(name)\r
+
+      FROM movies\r
+
+      WHERE LENGTH(name) != CHAR_LENGTH(name)"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "observe pattern ki en movies ka name ma koi na koi special character
+      ha\r
+
+      ascent character ma farak aa raha ha  "
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### Insert\r
+
+      ek particular string ma aap koi character insert kar sakta ho kisi
+      position par       \r
+
+      iska andr 4 parameter hota ha \r
+
+      insert(str, pos, len newstr)\r
+
+      - str: The original string to insert into.•\r
+
+      - pos: The position at which to insert the new substring. The first \r
+
+      position is 1.\r
+
+      \r
+
+      - len: The number of characters to replace.•\r
+
+      - newstr: The new substring to inser"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT INSERT('hello world',7,5,'india')
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### left and right\r
+
+      left sa aap starting ma sa nikal sakta ho           \r
+
+      right sa aap last ma sa nikal sakta ho\r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- har movie sa first 3 character chaya\r
+
+      SELECT name,LEFT(name,3)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT name,RIGHT(name,3)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### repeat\r
+
+      number of times us cheez ko repeat kar dega"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- example har movie ko 3 bar likna ha\r
+
+      SELECT REPEAT(name,3)\r
+
+      FROM movies"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### trim\r
+
+      - [ltrim and rtrim]\r
+
+      -  leading and trailing spcases of remove karta ha "
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT TRIM('  focus        ')
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "SELECT TRIM(BOTH '.' FROM \"...............name...........\")\r
+
+      -- dono tarf sa remove ho jayega"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT TRIM(LEADING '.' FROM "...............name...........")
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT TRIM(TRAILING'.' FROM "...............name...........")
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: deko aap aga sa hata sakta ho picha sa hata sakta ho lakin bich sa hata
+      nahi sakta
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT LENGTH(LTRIM('        hello'))
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT LENGTH(RTRIM('hello         '))
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### substring_index\r
+
+      isko aap compare kar sakta ho python ka (Split) function sa\r
+
+      kisi ek particular character ka basis par vo string ko break(thod) alag
+      kar deta ha"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT SUBSTRING_INDEX('www.google.com', '.', 2);
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: ""
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### strcmp\r
+
+      string comparison function\r
+
+      The STRCMP() function returns an integer that indicates the \r
+
+      relationship between the two strings:           \r
+
+      and comparion ho raha ha alpahatecally\r
+
+      - If str1 is less than str2, the function returns a negative integer.\r
+
+      - If str1 is greater than str2, the function returns a positive \r
+
+      integer.\r
+
+      \r
+
+      - If str1 is equal to str2, the function returns 0\r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT STRCMP('DELHI','MUMBAI')
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT STRCMP('DELHI','DELHI')
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### locate\r
+
+      ek given string ma kisi substring ka index postion postion \r
+
+      (\"world\", \"hello world\")\r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- aap kis bhi character ka postion in string\r
+
+      -- example hello world ma w ki position \r
+
+      SELECT LOCATE('w','hellow world')"
+    metadata: {}
+  - kind: 1
+    languageId: markdown
+    value: "### lpad and rpad \r
+
+      padding ka matlab ha hamra pass kisi ka phone number . huma phone number
+      ka aga country add karna ha \r
+
+      \r\n"
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: SELECT LPAD('888888888',12,'+91')
+    metadata: {}
+  - kind: 2
+    languageId: sql
+    value: "-- isi ka similar hota r pad\r
+
+      SELECT RPAD('888888888',12,'+91')"
+    metadata: {}
+metadata:
+  conn:
+    id: ntHqisTGnkdkB1EjXUZeT
+    name: mysql demo
+  database: campusx
