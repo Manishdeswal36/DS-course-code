@@ -44,9 +44,21 @@
               "icon": "lucide-book-up",
               "title": "Release Notes 1.11.4"
             }
+          },
+          {
+            "id": "a2aa8b9053a3a2b8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -194,7 +206,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1326dc8e85a51618",
+  "active": "a2aa8b9053a3a2b8",
   "lastOpenFiles": [
     "timeline.md",
     "Tableau Sales Dashboard/Sales target.csv",
